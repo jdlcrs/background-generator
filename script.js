@@ -4,8 +4,6 @@ var color2 = document.querySelector(".color2");
 var body = document.getElementById("gradient"); 
 var colorSurprise = document.querySelector(".btnRandom");
 
-/* console.log(css, colorOne, colorTwo);*/
-
 function setGradient() {
     body.style.background = "linear-gradient(to right, " + color1.value + "," + color2.value + ")";
     css.textContent = body.style.background + ";";
@@ -31,4 +29,10 @@ color1.addEventListener("input", setGradient);
 color2.addEventListener("input", setGradient);
 
 body.onload = setGradient;
-colorSurprise.onClick = setRandom;
+colorSurprise.addEventListener("click", setRandom);
+
+// This is a test function 
+
+function test() {
+    console.log("Hello, it's working")
+}
